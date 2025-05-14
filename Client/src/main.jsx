@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Navbar from './components/Navbar'
 import About from './components/About'
+import Experiences from './components/Experiences'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
     <About />
+    <Experiences />
   </StrictMode>,
 )
