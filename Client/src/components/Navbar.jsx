@@ -3,7 +3,7 @@ import "../styles/font.css";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 font-agrandir-narrow font-bold shadow-sm">
+        <div className="navbar bg-base-300 font-agrandir-narrow font-bold shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Obtenir mon CV</a>
+                <a className="btn hover:bg-secondary">Obtenir mon CV</a>
             </div>
         </div>
     );
