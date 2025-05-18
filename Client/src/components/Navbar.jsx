@@ -47,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn hover:bg-secondary">Obtenir mon CV</a>
+                <a className="btn hover:bg-primary hover:text-white hover:font-medium transition-colors duration-300 ">Obtenir mon CV</a>
             </div>
         </div>
     );

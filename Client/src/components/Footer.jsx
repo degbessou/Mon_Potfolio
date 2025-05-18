@@ -2,6 +2,16 @@ import React from "react";
 import "../styles/font.css";
 
 const Footer = () => {
+
+    {/*    useEffect(() => {
+        document.querySelectorAll('a').forEach(link => {
+            if (!link.href.startsWith(window.location.origin)) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    }, []);*/}
+
     return (
         <footer className="footer bg-base-300 text-base-content border-base-300 border-t px-24 py-4">
             <aside className="grid-flow-col items-center">
