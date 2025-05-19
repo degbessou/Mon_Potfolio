@@ -27,6 +27,9 @@ const Modal = ({ id, title, children }) => {
                     {children.tools && <div className="py-2">{children.tools}</div>}
                 </fieldset>
             </div>
+            <form method="dialog" className="modal-backdrop">
+                <button>close</button>
+            </form>
         </dialog>
     );
 };

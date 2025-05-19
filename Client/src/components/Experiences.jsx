@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/font.css";
 import Modal from "../assets/Modal";
-//import ModalTest from "../assets/ModalTest";
+import { ModalContents } from "../assets/Modal-contents";
+import { ModalContentsPro } from "../assets/Modal-contents-pro";
 
 const Experiences = () => {
     return (
@@ -62,26 +63,21 @@ const Experiences = () => {
                             <th>
                                 {/* Bouton pour ouvrir la modal */}
                                 <button
-                                    className="btn btn-ghost btn-xs"
+                                    className="btn btn-ghost btn-sm bg-primary text-primary-content"
                                     onClick={() => document.getElementById('employee').showModal()}
                                 >
-                                    Stack
+                                    Détails
                                 </button>
                                 {/* Modal */}
                                 <Modal id="employee" title="Stack Technique">
-                                    {{
-                                        front: <p>oracle apex, html5, css3, javascript</p>,
-                                        back: <p>sql, pl/sql</p>,
-                                        data: <p>oracle database</p>,
-                                        tools: <p>toad, sql*plus, git</p>
-                                    }}
+                                    {ModalContents.employee}
                                 </Modal>
                             </th>
                         </tr>
                         <tr>
                             <th>
                                 <label>
-                                    Fevrier 2022 -
+                                    Octobre 2024 -
                                     <br /> Jusqu'à ce jour
                                 </label>
                             </th>
@@ -115,19 +111,14 @@ const Experiences = () => {
                             <th>
                                 {/* Bouton pour ouvrir la modal */}
                                 <button
-                                    className="btn btn-ghost btn-xs"
-                                    onClick={() => document.getElementById('freelance').showModal()}
+                                    className="btn btn-ghost btn-sm bg-primary text-primary-content"
+                                    onClick={() => document.getElementById('portfolio').showModal()}
                                 >
-                                    Stack
+                                    Détails
                                 </button>
                                 {/* Modal */}
-                                <Modal id="freelance" title="Stack Technique">
-                                    {{
-                                        front: <p>html5, css3, tailwind, javascript, reactjs, daisyui, vite</p>,
-                                        back: <p>nodejs, expressjs</p>,
-                                        data: <p>power bi, excel, postgresql, mongodb</p>,
-                                        tools: <p>git, sourcetree</p>
-                                    }}
+                                <Modal id="portfolio" title="Stack Technique">
+                                    {ModalContentsPro.portfolio}
                                 </Modal>
                             </th>
                         </tr>
