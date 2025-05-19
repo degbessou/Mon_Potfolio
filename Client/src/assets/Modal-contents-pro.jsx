@@ -1,12 +1,12 @@
 export const ModalContentsPro = {
     draftnfl24: {
-        front: <p>microsoft power bi</p>,
+        front: <p>microsoft power bi, dax</p>,
         back: <p>n/a</p>,
         data: <p>postgresql, microsoft excel</p>,
         tools: <p>pgadmin 4, git, sourcetree</p>
     },
     draftnfl25: {
-        front: <p>microsoft power bi</p>,
+        front: <p>microsoft power bi, dax</p>,
         back: <p>n/a</p>,
         data: <p>postgresql, microsoft excel</p>,
         tools: <p>pgadmin 4, git, sourcetree</p>

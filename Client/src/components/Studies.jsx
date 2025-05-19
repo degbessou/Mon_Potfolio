@@ -1,123 +1,70 @@
 import React from "react";
 import "../styles/font.css";
+import Card from "../assets/Cards";
 
 const Studies = () => {
-    const members = [
+    const cardsData = [
         {
-            company_icon: <svg className="w-8 h-8" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_715_1824)">
-                    <path d="M34.6588 17.9031C34.6588 16.7135 34.5623 15.5175 34.3565 14.3472H17.85V21.0861H27.3025C26.9103 23.2595 25.6499 25.1822 23.8044 26.4039V30.7765H29.4438C32.7554 27.7286 34.6588 23.2274 34.6588 17.9031Z" fill="#4285F4" />
-                    <path d="M17.85 35.0011C22.5698 35.0011 26.5502 33.4514 29.4502 30.7764L23.8109 26.4038C22.2419 27.4712 20.2163 28.0757 17.8564 28.0757C13.2909 28.0757 9.41989 24.9956 8.03095 20.8545H2.21155V25.3621C5.18234 31.2715 11.2332 35.0011 17.85 35.0011Z" fill="#34A853" />
-                    <path d="M8.02451 20.8547C7.29146 18.6813 7.29146 16.3278 8.02451 14.1544V9.64673H2.21154C-0.270546 14.5916 -0.270546 20.4174 2.21154 25.3623L8.02451 20.8547Z" fill="#FBBC04" />
-                    <path d="M17.85 6.92659C20.3449 6.88801 22.7563 7.82683 24.5632 9.55014L29.5595 4.55382C26.3958 1.58303 22.1968 -0.0502629 17.85 0.0011793C11.2332 0.0011793 5.18234 3.73074 2.21155 9.6466L8.02452 14.1542C9.40703 10.0067 13.2845 6.92659 17.85 6.92659Z" fill="#EA4335" />
+            icon: (<svg width="44" height="44" viewBox="0 -23 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                <g>
+                    <path d="M251.69966,119.287023 C250.801236,118.566234 249.790082,118.081154 248.690111,117.872774 C242.192764,124.349625 234.264086,131.171499 227.223585,135.755852 C223.974912,137.914802 219.889302,138.994277 217.183783,138.994277 C210.956304,138.994277 208.250784,133.057164 207.437762,123.618588 C206.35487,110.941587 205.623833,95.7571967 205.623833,72.2888595 C205.623833,48.2192956 200.161552,31.8563647 185.609133,30.5719259 C184.994243,30.5172689 184.372519,30.4796922 183.723468,30.4796922 C174.790469,30.4796922 170.458904,35.0640458 164.774578,46.6649879 C159.903275,56.6433013 152.323038,71.2093844 138.248866,98.7223375 C126.067194,122.460543 112.532762,143.500061 100.890827,158.066145 C97.6489853,162.103928 95.0869396,164.87777 92.6786168,166.45599 C91.0696522,167.514969 89.5255928,168.044458 87.8995479,168.044458 C83.3049462,168.044458 79.9503746,164.16723 78.8299067,155.138581 C78.5634539,152.993295 78.4233954,150.557643 78.4233954,147.814547 C78.4233954,129.203847 85.4638966,98.9922062 97.6421531,54.4843509 C106.575152,22.1171755 102.786741,0.00159833507 83.294698,0.00159833507 C83.2639535,0.00159833507 83.233209,0.00159833507 83.2024643,0.00159833507 C83.1614716,0.00159833507 83.1204789,0.00159833507 83.0760702,0.00159833507 L83.0624059,0.0050143958 C78.6488554,0.0562553068 74.9902544,1.65497173 71.4648797,4.42881304 C67.994162,7.16166163 64.5200282,13.0646146 61.2781866,21.0001237 C57.6230016,29.9399546 35.3981105,74.5195472 0.0248016023,97.4857234 C-0.391957807,106.217175 4.55108208,114.94521 14.5669721,115.891459 C23.6844383,116.755722 30.1578733,112.912654 38.4930615,107.31373 C37.8679224,110.09782 37.2906081,112.700858 36.7645348,115.081852 C36.1428117,117.89327 35.6133224,120.318673 35.1897308,122.276076 C34.5543435,125.189976 34.1512483,127.065393 34.0316862,127.584635 C32.8736417,132.896609 32.046955,137.94213 31.5106333,142.731448 C26.5231847,187.314456 47.1869361,209.313887 71.3863103,209.313887 C75.4309262,209.313887 79.4379655,208.832224 83.4176762,207.82107 C110.08003,201.060685 135.748311,170.476694 166.130755,100.071681 C165.669587,107.73049 165.621761,114.883721 165.95312,121.521127 C167.954931,161.871636 183.914767,173.978156 206.464183,173.978156 C223.517159,173.978156 239.487243,165.079318 247.607219,154.018112 C253.564829,146.195334 256.00048,137.562947 256.00048,130.819644 C256.00048,125.586239 254.340275,121.408397 251.69966,119.287023" fill="#EA5252">
+                    </path>
                 </g>
-                <defs>
-                    <clipPath id="clip0_715_1824">
-                        <rect width="35" height="35" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-            ,
-            company_name: "Google",
-            job_title: "Full stack engineer",
-            job_description: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-            job_type: "Full-time",
-            location: "Remotely",
-            path: "javascript:void(0)"
-        },
+            </svg>),
+            title: "Baccalauréat Sc. Informatique",
+            school: "Université du Québec en Outaouais",
+            description: "J'ai été formé pour devenir développeur, acquérant des compétences en programmation, génie logiciel, gestion de bases de données, analyse statistique et traitement de données.",
+            date: "2020-2023",
+            location: "Gatineau, Québec",
+            status: "Terminé"
+        }, {
+            icon: (
+                <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="17" y="17" width="10" height="10" fill="#FEBA08" />
+                    <rect x="5" y="17" width="10" height="10" fill="#05A6F0" />
+                    <rect x="17" y="5" width="10" height="10" fill="#80BC06" />
+                    <rect x="5" y="5" width="10" height="10" fill="#F25325" />
+                </svg>
+            ),
+            title: "Power BI Data Analyst Associate",
+            school: "Microsoft",
+            description: "Ce certificat a pour but d'acquérir des méthodes et des bonnes pratiques en lien avec les exigences techniques pour modéliser, visualiser et analyser des données avec Microsoft Power BI.",
+            date: "2025",
+            location: "Québec ville, Québec",
+            status: "En cours"
+        }, {
+            icon: (
+                <svg width="42" height="42" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#EA1B22" fill-rule="evenodd" d="M.1 8c0 2.761 2.237 5 4.997 5h5.806A4.999 4.999 0 0015.9 8c0-2.761-2.237-5-4.997-5H5.097A4.999 4.999 0 00.1 8zm13.911 0a3.235 3.235 0 01-3.234 3.237h-5.55A3.235 3.235 0 011.991 8a3.235 3.235 0 013.234-3.236h5.551A3.235 3.235 0 0114.011 8z" clip-rule="evenodd" /></svg>
+            ),
+            title: "Oracle Database SQL Associate",
+            school: "Oracle",
+            description: "Ce certificat a pour but de devenir un associé certifié Oracle Database SQL, maîtrisant les concepts fondamentaux de SQL pour travailler sur des projets de bases de données diverses.",
+            date: "2024",
+            location: "Québec ville, Québec",
+            status: "En cours"
+        }
     ]
     return (
         <div>
             <div className="flex justify-center mt-8">
                 <div className="badge badge-outline badge-color-secondary">
-                    <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></circle><path d="m12,17v-5.5c0-.276-.224-.5-.5-.5h-1.5" fill="none" stroke="currentColor" strokeLinecap="square" stroke-miterlimit="10" strokeWidth="2"></path><circle cx="12" cy="7.25" r="1.25" fill="currentColor" strokeWidth="2"></circle></g></svg>
-                    Mes études
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="14" height="14"><g xmlns="http://www.w3.org/2000/svg" transform="scale(.09375)"><path d="M256 368a16 16 0 0 1-7.94-2.11L108 285.84a8 8 0 0 0-12 6.94V368a16 16 0 0 0 8.23 14l144 80a16 16 0 0 0 15.54 0l144-80a16 16 0 0 0 8.23-14v-75.22a8 8 0 0 0-12-6.94l-140.06 80.05A16 16 0 0 1 256 368"></path><path d="M495.92 190.5v-.11a16 16 0 0 0-8-12.28l-224-128a16 16 0 0 0-15.88 0l-224 128a16 16 0 0 0 0 27.78l224 128a16 16 0 0 0 15.88 0L461 221.28a2 2 0 0 1 3 1.74v144.53c0 8.61 6.62 16 15.23 16.43A16 16 0 0 0 496 368V192a15 15 0 0 0-.08-1.5"></path></g></svg>                    Mes études
                 </div>
             </div>
-            <section className="py-12">
-                <div className="max-w-screen-lg mx-auto px-4 md:px-8">
-                    <div className="max-w-md">
-                        <h1 className="text-gray-800 text-xl sm:text-2xl">Formations</h1>
-                    </div>
-                    <ul className="mt-12 divide-y space-y-3">
-                        <li className="px-4 py-5 duration-150 hover:border-white hover:rounded-xl hover:bg-gray-50">
-                            <a className="space-y-3">
-                                <div className="flex items-center gap-x-3">
-                                    <div className="bg-white w-14 h-14 border rounded-full flex items-center justify-center">
-                                        icon
-                                    </div>
-                                    <div>
-                                        <span className="block text-sm text-indigo-600 font-medium">Université du Québec en Outaouais</span>
-                                        <h3 className="text-base text-gray-800 font-semibold mt-1">
-                                            Baccalauréat, Informatique</h3>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 sm:text-sm">
-                                    janvier 2020 - avril 2023
-                                </p>
-                                <div className="text-sm text-gray-600 flex items-center gap-6">
-                                    <span className="flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6V5C6 3.34315 7.34315 2 9 2H11C12.6569 2 14 3.34315 14 5V6H16C17.1046 6 18 6.89543 18 8V11.5708C15.5096 12.4947 12.8149 12.9999 10 12.9999C7.18514 12.9999 4.49037 12.4947 2 11.5707V8C2 6.89543 2.89543 6 4 6H6ZM8 5C8 4.44772 8.44772 4 9 4H11C11.5523 4 12 4.44772 12 5V6H8V5ZM9 10C9 9.44772 9.44772 9 10 9H10.01C10.5623 9 11.01 9.44772 11.01 10C11.01 10.5523 10.5623 11 10.01 11H10C9.44772 11 9 10.5523 9 10Z" fill="#9CA3AF" />
-                                            <path d="M2 13.6923V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V13.6923C15.4872 14.5404 12.7964 14.9999 10 14.9999C7.20363 14.9999 4.51279 14.5404 2 13.6923Z" fill="#9CA3AF" />
-                                        </svg>
-                                        janvier 2020 - avril 2023
-                                    </span>
-                                    <span className="flex items-center gap-2">
-                                        <svg className="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.05025 4.05025C7.78392 1.31658 12.2161 1.31658 14.9497 4.05025C17.6834 6.78392 17.6834 11.2161 14.9497 13.9497L10 18.8995L5.05025 13.9497C2.31658 11.2161 2.31658 6.78392 5.05025 4.05025ZM10 11C11.1046 11 12 10.1046 12 9C12 7.89543 11.1046 7 10 7C8.89543 7 8 7.89543 8 9C8 10.1046 8.89543 11 10 11Z" fill="#9CA3AF" />
-                                        </svg>
-                                        Gatineau, Québec
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="max-w-screen-lg mx-auto px-4 md:px-8">
-                    <div className="max-w-md">
-                        <h1 className="text-gray-800 text-xl sm:text-2xl">Certifications</h1>
-                    </div>
-                    <ul className="mt-12 divide-y space-y-3">
-                        {
-                            members.map((item, idx) => (
-                                <li key={idx} className="px-4 py-5 duration-150 hover:border-white hover:rounded-xl hover:bg-gray-50">
-                                    <a href={item.path} className="space-y-3">
-                                        <div className="flex items-center gap-x-3">
-                                            <div className="bg-white w-14 h-14 border rounded-full flex items-center justify-center">
-                                                {item.company_icon}
-                                            </div>
-                                            <div>
-                                                <span className="block text-sm text-indigo-600 font-medium">{item.company_name}</span>
-                                                <h3 className="text-base text-gray-800 font-semibold mt-1">{item.job_title}</h3>
-                                            </div>
-                                        </div>
-                                        <p className="text-gray-600 sm:text-sm">
-                                            {item.job_description}
-                                        </p>
-                                        <div className="text-sm text-gray-600 flex items-center gap-6">
-                                            <span className="flex items-center gap-2">
-                                                <svg className="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6V5C6 3.34315 7.34315 2 9 2H11C12.6569 2 14 3.34315 14 5V6H16C17.1046 6 18 6.89543 18 8V11.5708C15.5096 12.4947 12.8149 12.9999 10 12.9999C7.18514 12.9999 4.49037 12.4947 2 11.5707V8C2 6.89543 2.89543 6 4 6H6ZM8 5C8 4.44772 8.44772 4 9 4H11C11.5523 4 12 4.44772 12 5V6H8V5ZM9 10C9 9.44772 9.44772 9 10 9H10.01C10.5623 9 11.01 9.44772 11.01 10C11.01 10.5523 10.5623 11 10.01 11H10C9.44772 11 9 10.5523 9 10Z" fill="#9CA3AF" />
-                                                    <path d="M2 13.6923V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V13.6923C15.4872 14.5404 12.7964 14.9999 10 14.9999C7.20363 14.9999 4.51279 14.5404 2 13.6923Z" fill="#9CA3AF" />
-                                                </svg>
-                                                {item.job_type}
-                                            </span>
-                                            <span className="flex items-center gap-2">
-                                                <svg className="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.05025 4.05025C7.78392 1.31658 12.2161 1.31658 14.9497 4.05025C17.6834 6.78392 17.6834 11.2161 14.9497 13.9497L10 18.8995L5.05025 13.9497C2.31658 11.2161 2.31658 6.78392 5.05025 4.05025ZM10 11C11.1046 11 12 10.1046 12 9C12 7.89543 11.1046 7 10 7C8.89543 7 8 7.89543 8 9C8 10.1046 8.89543 11 10 11Z" fill="#9CA3AF" />
-                                                </svg>
-
-                                                {item.location}
-                                            </span>
-                                        </div>
-                                    </a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </section>
+            <div className="grid grid-cols-3 flex flex-col gap-6 md:flex-row md:flex-wrap mx-24 mt-4">
+                {cardsData.map((item, idx) => (
+                    <Card
+                        key={idx}
+                        icon={item.icon}
+                        title={item.title}
+                        school={item.school}
+                        description={item.description}
+                        date={item.date}
+                        location={item.location}
+                        status={item.status}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
