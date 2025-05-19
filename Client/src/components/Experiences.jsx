@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles/font.css";
 import Modal from "../assets/Modal";
-import { ModalContents } from "../assets/Modal-contents";
-import { ModalContentsPro } from "../assets/Modal-contents-pro";
+import { ModalContentsExp } from "../assets/Modal-contents-exp";
 
 const Experiences = () => {
     return (
@@ -70,7 +69,7 @@ const Experiences = () => {
                                 </button>
                                 {/* Modal */}
                                 <Modal id="employee" title="Stack Technique">
-                                    {ModalContents.employee}
+                                    {ModalContentsExp.employee}
                                 </Modal>
                             </th>
                         </tr>
@@ -112,13 +111,13 @@ const Experiences = () => {
                                 {/* Bouton pour ouvrir la modal */}
                                 <button
                                     className="btn btn-ghost btn-sm bg-primary text-primary-content"
-                                    onClick={() => document.getElementById('portfolio').showModal()}
+                                    onClick={() => document.getElementById('freelance').showModal()}
                                 >
                                     Détails
                                 </button>
                                 {/* Modal */}
-                                <Modal id="portfolio" title="Stack Technique">
-                                    {ModalContentsPro.portfolio}
+                                <Modal id="freelance" title="Stack Technique">
+                                    {ModalContentsExp.freelance}
                                 </Modal>
                             </th>
                         </tr>

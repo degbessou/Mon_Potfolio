@@ -12,19 +12,19 @@ const Modal = ({ id, title, children }) => {
                 <h3 className="font-bold text-lg text-center">{title}</h3>
                 <fieldset className="fieldset bg-base-200 text-error-content border-base-300 rounded-box w-m border p-4">
                     <legend className="fieldset-legend font-light">FRONTEND</legend>
-                    {children.front && <div className="py-2">{children.front}</div>}
+                    {children && children.front && <div className="py-2 font-bold">{children.front}</div>}
                 </fieldset>
                 <fieldset className="fieldset bg-base-200 border-base-300 text-error-content rounded-box w-m border p-4">
                     <legend className="fieldset-legend font-light">BACKEND</legend>
-                    {children.back && <div className="py-2">{children.back}</div>}
+                    {children && children.back && <div className="py-2 font-bold">{children.back}</div>}
                 </fieldset>
                 <fieldset className="fieldset bg-base-200 border-base-300 text-error-content rounded-box w-m border p-4">
                     <legend className="fieldset-legend font-light">DONNÉES</legend>
-                    {children.data && <div className="py-2">{children.data}</div>}
+                    {children && children.data && <div className="py-2 font-bold">{children.data}</div>}
                 </fieldset>
                 <fieldset className="fieldset bg-base-200 border-base-300 text-error-content rounded-box w-m border p-4">
                     <legend className="fieldset-legend font-light">OUTILS</legend>
-                    {children.tools && <div className="py-2">{children.tools}</div>}
+                    {children && children.tools && <div className="py-2 font-bold">{children.tools}</div>}
                 </fieldset>
             </div>
             <form method="dialog" className="modal-backdrop">

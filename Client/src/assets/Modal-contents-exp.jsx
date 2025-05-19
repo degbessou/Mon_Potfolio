@@ -1,4 +1,4 @@
-export const ModalContents = {
+export const ModalContentsExp = {
     freelance: {
         front: <p>html5, css3, tailwind, javascript, reactjs, daisyui, vite</p>,
         back: <p>nodejs, expressjs</p>,
