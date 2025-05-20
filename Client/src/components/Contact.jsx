@@ -3,91 +3,40 @@ import "../styles/font.css";
 
 const Contact = () => {
     return (
-        <main className="py-14">
-            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-                <div className="max-w-lg mx-auto space-y-3 sm:text-center">
-                    <h3 className="text-indigo-600 font-semibold">
-                        Contact
-                    </h3>
-                    <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        Get in touch
-                    </p>
-                    <p>
-                        We’d love to hear from you! Please fill out the form bellow.
-                    </p>
-                </div>
-                <div className="mt-12 max-w-lg mx-auto">
-                    <form
-                        onSubmit={(e) => e.preventDefault()}
-                        className="space-y-5"
-                    >
-                        <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
-                            <div>
-                                <label className="font-medium">
-                                    First name
-                                </label>
-                                <input
-                                    type="text"
-                                    required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                                />
-                            </div>
-                            <div>
-                                <label className="font-medium">
-                                    Last name
-                                </label>
-                                <input
-                                    type="text"
-                                    required
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <label className="font-medium">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                            />
-                        </div>
-                        <div>
-                            <label className="font-medium">
-                                Phone number
-                            </label>
-                            <div className="relative mt-2">
-                                <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
-                                    <select className="text-sm bg-transparent outline-none rounded-lg h-full">
-                                        <option>US</option>
-                                        <option>ES</option>
-                                        <option>MR</option>
-                                    </select>
-                                </div>
-                                <input
-                                    type="number"
-                                    placeholder="+1 (555) 000-000"
-                                    required
-                                    className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <label className="font-medium">
-                                Message
-                            </label>
-                            <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
-                        </div>
-                        <button
-                            className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
-                        >
-                            Submit
-                        </button>
-                    </form>
+        <div className="bg-base-100 flex flex-col items-center py-4">
+            <div className="flex justify-center mt-6 pb-4">
+                <div className="badge badge-outline badge-color-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="14" height="14"><g xmlns="http://www.w3.org/2000/svg" fill="currentColor" transform="scale(3)"><path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1M5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path><path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path></g></svg>                    Contact
                 </div>
             </div>
-        </main>
+            <fieldset className="fieldset bg-white-100 border-base-300 rounded-box w-lg p-4">
+                <div className="max-w-lg mx-auto sm:text-center">
+                    <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                        Collaborons
+                    </p>
+                    <p className="text-lg py-6">
+                        Prêt à transformer vos idées en solutions ? Contactez moi.
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 pb-4">
+                    <div>
+                        <input type="text" className="input border-primary" placeholder="Nom" />
+                    </div>
+                    <div>
+                        <input type="text" className="input border-primary" placeholder="Prénom" />
+                    </div>
+                </div>
+                <div className="grid grid-rows-3 gap-2">
+                    <input type="text" className="input w-auto border-primary" placeholder="Organisation" />
+
+                    <input type="email" className="input w-auto border-primary" placeholder="Email" />
+
+                    <input type="text" className="input input-xl w-auto border-primary" placeholder="Message" />
+                </div>
+
+                <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300 mt-4">Envoyer</button>
+            </fieldset>
+        </div>
     )
 }
 
