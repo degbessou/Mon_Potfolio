@@ -18,7 +18,7 @@ const About = () => {
                         <br />Que vous recherchiez des visualisations de données percutantes ou des interfaces web fonctionnelles, <br /> ma méthode canadienne combine rigueur et créativité pour répondre à vos attentes.
                         <br />Bienvenue dans mon univers où l'expertise en données rencontre ma passion pour le développement web !
                     </p>
-                    <button className="btn btn-primary hover:text-accent transition-colors duration-300">Travaillez avec moi</button>
+                    <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300">Travaillez avec moi</button>
                 </div>
             </div>
         </div>
