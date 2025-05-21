@@ -1,7 +1,24 @@
 import React from "react";
 import "../styles/font.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                alert("Message envoyé avec succès !");
+            }
+                , (error) => {
+                    console.log(error.text);
+                    alert("Une erreur s'est produite. Veuillez réessayer.");
+                });
+        e.target.reset();
+
+    }
+
     return (
         <div className="bg-base-100 flex flex-col items-center py-4">
             <div className="flex justify-center mt-6 pb-4">
@@ -18,23 +35,25 @@ const Contact = () => {
                         Prêt à transformer vos idées en solutions ? Contactez moi.
                     </p>
                 </div>
-                <div className="grid grid-cols-2 gap-4 pb-4">
-                    <div>
-                        <input type="text" className="input border-primary" placeholder="Nom" />
+                <form className="contact_form" onSubmit={sendEmail}>
+                    <div className="grid grid-cols-2 gap-4 pb-4">
+                        <div>
+                            <input type="text" name="user_name" className="input border-primary" placeholder="Nom" />
+                        </div>
+                        <div>
+                            <input type="text" name="user_prenom" className="input border-primary" placeholder="Prénom" />
+                        </div>
                     </div>
-                    <div>
-                        <input type="text" className="input border-primary" placeholder="Prénom" />
+                    <div className="grid grid-rows-3 gap-2">
+                        <input type="text" name="user_org" className="input w-auto border-primary" placeholder="Organisation" />
+
+                        <input type="text" name="user_email" className="input w-auto border-primary" placeholder="Email" />
+
+                        <input type="text" name="message" className="input input-xl w-auto border-primary" placeholder="Message" />
                     </div>
-                </div>
-                <div className="grid grid-rows-3 gap-2">
-                    <input type="text" className="input w-auto border-primary" placeholder="Organisation" />
 
-                    <input type="email" className="input w-auto border-primary" placeholder="Email" />
-
-                    <input type="text" className="input input-xl w-auto border-primary" placeholder="Message" />
-                </div>
-
-                <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300 mt-4">Envoyer</button>
+                    <button type="submit" className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300 mt-4">Envoyer</button>
+                </form>
             </fieldset>
         </div>
     )
