@@ -1,9 +1,9 @@
 export const ModalContentsExp = {
     freelance: {
         front: <p>html5, css3, tailwind, javascript, reactjs, daisyui, vite</p>,
-        back: <p>nodejs, expressjs</p>,
+        back: <p>nodejs, expressjs, api rest</p>,
         data: <p>power bi, excel, postgresql, mongodb</p>,
-        tools: <p>git, sourcetree</p>
+        tools: <p>git, github, sourcetree</p>
     },
     employee: {
         front: <p>oracle apex, html5, css3, javascript</p>,

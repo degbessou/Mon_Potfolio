@@ -80,7 +80,12 @@ const Projects = () => {
                                 ))}
                                 </td>
                                 {/*statut*/}
-                                <td className={`badge badge-outline badge-${item.statut_color} m-6`}>{item.statut}</td>
+                                <td className={`badge badge-outline ${item.statut_color === "success"
+                                    ? "border-success text-success"
+                                    : item.statut_color === "warning"
+                                        ? "border-warning text-warning"
+                                        : "border-info text-info"
+                                    } m-6`}>{item.statut}</td>
                                 {/*lien*/}
                                 <td >
                                     <a href={`${item.link}`} className="link link-hover font-bold text-neutral">Voir</a>
