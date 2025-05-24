@@ -2,6 +2,16 @@ import React from "react";
 import "../styles/font.css";
 
 const Navbar = () => {
+    const handleSmoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
     return (
         <div className="navbar bg-base-300 font-agrandir-narrow font-bold shadow-sm">
             <div className="navbar-start">
@@ -12,11 +22,16 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>À propos</a></li>
-                        <li><a>Expériences</a></li>
-                        <li><a>Projets</a></li>
-                        <li><a>Éducation</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a href="#experiences"
+                            onClick={(e) => handleSmoothScroll(e, 'experiences')}>Expériences</a></li>
+                        <li><a href="#projets"
+                            onClick={(e) => handleSmoothScroll(e, 'projets')}>Projets</a></li>
+                        <li><a href="#education"
+                            onClick={(e) => handleSmoothScroll(e, 'education')}>Éducation</a></li>
+                        <li><a href="#informations"
+                            onClick={(e) => handleSmoothScroll(e, 'informations')}>Informations</a></li>
+                        <li><a href="#contact"
+                            onClick={(e) => handleSmoothScroll(e, 'contact')}>Contact</a></li>
                     </ul>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
@@ -39,15 +54,30 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>À propos</a></li>
-                    <li><a>Expériences</a></li>
-                    <li><a>Projets</a></li>
-                    <li><a>Éducation</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="#experiences"
+                        onClick={(e) => handleSmoothScroll(e, 'experiences')}>Expériences</a></li>
+                    <li><a href="#projets"
+                        onClick={(e) => handleSmoothScroll(e, 'projets')}>Projets</a></li>
+                    <li><a href="#education"
+                        onClick={(e) => handleSmoothScroll(e, 'education')}>Éducation</a></li>
+                    <li><a href="#informations"
+                        onClick={(e) => handleSmoothScroll(e, 'informations')}>Informations</a></li>
+                    <li><a href="#contact"
+                        onClick={(e) => handleSmoothScroll(e, 'contact')}>Contact</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn hover:bg-primary hover:text-white hover:font-medium transition-colors duration-300 ">Obtenir mon CV</a>
+            <div className="flex grow navbar-end px-2">
+                <div className="flex items-stretch">
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn hover:bg-primary hover:text-white hover:font-medium transition-colors duration-300 ">Obtenir mon CV</div>
+                        <ul
+                            tabIndex={0}
+                            className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm">
+                            <li><a href="./files/cv_fr donald_degbessou.pdf" target="_blank" rel="noopener noreferrer">Français</a></li>
+                            <li><a href="./files/cv_en donald_degbessou.pdf" target="_blank" rel="noopener noreferrer">Anglais</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     );

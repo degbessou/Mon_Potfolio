@@ -5,7 +5,7 @@ import { ModalContentsExp } from "../assets/Modal-contents-exp";
 
 const Experiences = () => {
     return (
-        <div >
+        <div id="experiences">
             <div className="flex justify-center mt-8">
                 <div className="badge badge-outline badge-color-secondary">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="14" height="14"><path xmlns="http://www.w3.org/2000/svg" d="M44 19.34A2 2 0 0 0 42.28 18L30.9 16.34 25.8 6a2 2 0 0 0-3.6 0l-5.1 10.32L5.72 18a2 2 0 0 0-1.62 1.36 2 2 0 0 0 .5 2l8.26 8-2 11.36a2 2 0 0 0 .8 2 2 2 0 0 0 2.1.14L24 37.52l10.2 5.36a1.86 1.86 0 0 0 .92.24 2 2 0 0 0 1.18-.38 2 2 0 0 0 .8-2l-2-11.36 8.26-8a2 2 0 0 0 .64-2.04m-12.3 8a2 2 0 0 0-.58 1.78l1.44 8.38-7.52-4a2 2 0 0 0-1.88 0l-7.52 4 1.44-8.38a2 2 0 0 0-.58-1.78l-6-6 8.42-1.22a2 2 0 0 0 1.52-1.1L24 11.4l3.76 7.64a2 2 0 0 0 1.52 1.1l8.42 1.22z"></path></svg>                    Mes expériences
@@ -85,7 +85,7 @@ const Experiences = () => {
                                     <div
                                         className="mask mask-squircle w-24 h-24"
                                         style={{
-                                            backgroundImage: "url('/pictures/freelancer_logo.png')",
+                                            backgroundImage: "url('/pictures/freelance.png')",
                                             backgroundSize: "contain",
                                             backgroundRepeat: "no-repeat",
                                             backgroundPosition: "center"

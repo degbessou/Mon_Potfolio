@@ -7,18 +7,18 @@ import Experiences from './components/Experiences'
 import Projects from './components/Projects'
 import Studies from './components/Studies'
 import Informations from './components/Informations'
-import Description2 from './components/Description2'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Banner from './components/Banner'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Banner />
     <Navbar />
     <About />
     <Experiences />
     <Projects />
     <Studies />
-    {/* <Description2 /> */}
     <Informations />
     <Contact />
     <Footer />

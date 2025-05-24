@@ -108,7 +108,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="bg-base-100 flex flex-col items-center py-4">
+        <div className="bg-base-100 flex flex-col items-center py-4" id="contact">
             {/* Composant d'alerte */}
             {alert.show && (
                 <div role="alert" className={`alert ${alert.type === "success" ? "alert-success" : alert.type === "warning" ? "alert-warning" : "alert-error"} fixed top-4 right-4 z-50 w-auto`}>
@@ -143,7 +143,7 @@ const Contact = () => {
                     </p>
                 </div>
                 <form className="contact_form" onSubmit={sendEmail} noValidate>
-                    <div className="grid grid-cols-2 gap-4 pb-4">
+                    <div className="grid grid-cols-2 gap-4 pb-8">
                         <div>
                             <input type="text" name="user_name" className={`input w-auto border-primary ${errors.user_name ? 'input-error' : ''}`} placeholder="Nom" />                        </div>
                         <div>

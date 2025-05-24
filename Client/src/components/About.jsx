@@ -3,6 +3,17 @@ import "../styles/font.css";
 
 const About = () => {
 
+    const handleSmoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <div className="hero bg-base-200 min-h-[600px]">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -18,7 +29,8 @@ const About = () => {
                         <br />Que vous recherchiez des visualisations de données percutantes ou des interfaces web fonctionnelles, <br /> ma méthode canadienne combine rigueur et créativité pour répondre à vos attentes.
                         <br />Bienvenue dans mon univers où l'expertise en données rencontre ma passion pour le développement web !
                     </p>
-                    <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300">Travaillez avec moi</button>
+                    <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300" href="#contact"
+                        onClick={(e) => handleSmoothScroll(e, 'contact')}>Travaillez avec moi</button>
                 </div>
             </div>
         </div>
