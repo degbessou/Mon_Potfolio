@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/font.css";
 
 const Navbar = () => {
+
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
         const targetElement = document.getElementById(targetId);
@@ -12,6 +13,7 @@ const Navbar = () => {
             });
         }
     };
+
     return (
         <div className="navbar bg-base-300 font-agrandir-narrow font-bold shadow-sm">
             <div className="navbar-start">

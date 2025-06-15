@@ -25,11 +25,11 @@ const About = () => {
                     <h1 className="text-5xl font-bold">Salut, moi c'est Donald !</h1>
                     <p className="text-justify py-6">
                         Développeur informatique à Québec, je transforme les données en tableaux de bord stratégiques.
-                        <br />Expert en analyse de données et novice enthousiaste en création d'applications pour le web, <br /> j'adopte une approche où la conception guide le développement.
-                        <br />Que vous recherchiez des visualisations de données percutantes ou des interfaces web fonctionnelles, <br /> ma méthode canadienne combine rigueur et créativité pour répondre à vos attentes.
-                        <br />Bienvenue dans mon univers où l'expertise en données rencontre ma passion pour le développement web !
+                        Expert en analyse de données et novice enthousiaste en création d'applications pour le web, j'adopte une approche où la conception guide le développement.
+                        Que vous recherchiez des visualisations de données percutantes ou des interfaces web fonctionnelles, ma méthode canadienne combine rigueur et créativité pour répondre à vos attentes.
+                        Bienvenue dans mon univers où l'expertise en données rencontre ma passion pour le développement web !
                     </p>
-                    <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300" href="#contact"
+                    <button className="btn btn-primary hover:bg-base-200 hover:text-neutral hover:font-bold transition-colors duration-300 w-full md:w-auto" href="#contact"
                         onClick={(e) => handleSmoothScroll(e, 'contact')}>Travaillez avec moi</button>
                 </div>
             </div>
