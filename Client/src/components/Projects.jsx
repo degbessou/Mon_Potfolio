@@ -11,21 +11,12 @@ const Projects = () => {
 
     const tableItems = [
         {
-            name: "Tableau de bord Draft NFL 2024",
-            desc: "Développement d'un tableau de bord interactif analysant &#13; les données de la draft NFL 2024",
+            name: "Tableau de bord Draft NFL 2024 & 2025",
+            desc: "Développement d'un tableau de bord interactif analysant &#13; les données de la draft NFL 2024 et 2025",
             stack: "draftnfl24",
             statut: "Terminé",
             statut_color: "success",
             link: "https://github.com/degbessou/Dashboard.git"
-        },
-        {
-            name: "Tableau de bord Draft NFL 2025",
-            desc: "Développement d'un tableau de bord interactif analysant &#13; les données de la draft NFL 2025",
-            stack: "draftnfl25",
-            statut: "Terminé",
-            statut_color: "success",
-            link: "https://github.com/degbessou/draft_nfl_2025.git"
-
         },
         {
             name: "Portfolio personnel",
@@ -42,6 +33,22 @@ const Projects = () => {
             statut: "En&nbsp;cours",
             statut_color: "warning",
             link: "#"
+        },
+        {
+            name: "HelloADAM",
+            desc: "Un assistant conversationnel pour étudiants, basé sur l’IA, pour simplifier la vie universitaire.",
+            stack: "helloadam",
+            statut: "Terminé",
+            statut_color: "success",
+            link: "https://helloadam.ca/"
+        },
+        {
+            name: "BencoFoot",
+            desc: "Vitrine moderne, fiable et entièrement dédié au football béninois.",
+            stack: "bencofoot",
+            statut: "Terminé",
+            statut_color: "success",
+            link: "https://www.bencofoot.com/"
         }
     ]
 
