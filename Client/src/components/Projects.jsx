@@ -1,137 +1,115 @@
 import React from "react";
 import "../styles/font.css";
 import UseModal from "../hooks/UseModal";
+import ModalText from "../assets/ModalText"; // Modal pour description
 import Modal from "../assets/Modal";
-import { ModalContentsPro } from "../assets/Modal-contents-pro";
-
+import { projectsData } from "../data/ProjectsData";
+import { ModalContentsPro } from "../data/Modal-contents-pro";
 
 const Projects = () => {
-
     const { openModal } = UseModal();
 
-    const tableItems = [
-        {
-            name: "Tableau de bord Draft NFL 2024 & 2025",
-            desc: "Développement d'un tableau de bord interactif analysant &#13; les données de la draft NFL 2024 et 2025",
-            stack: "draftnfl24",
-            statut: "Terminé",
-            statut_color: "success",
-            link: "https://github.com/degbessou/Dashboard.git"
-        },
-        {
-            name: "Portfolio personnel",
-            desc: "Création d'un portfolio personnel mettant en valeur &#13; mes compétences et projets.",
-            stack: "portfolio",
-            statut: "Terminé",
-            statut_color: "success",
-            link: "degbessou.com"
-        },
-        {
-            name: "Site vitine EasyTech",
-            desc: "Conception et développement d'une plateforme web &#13; professionnelle pour une entreprise de technologies web abordable.",
-            stack: "easyteck",
-            statut: "En&nbsp;cours",
-            statut_color: "warning",
-            link: "#"
-        },
-        {
-            name: "HelloADAM",
-            desc: "Un assistant conversationnel pour étudiants, basé sur l’IA, pour simplifier la vie universitaire.",
-            stack: "helloadam",
-            statut: "Terminé",
-            statut_color: "success",
-            link: "https://helloadam.ca/"
-        },
-        {
-            name: "BencoFoot",
-            desc: "Vitrine moderne, fiable et entièrement dédié au football béninois.",
-            stack: "bencofoot",
-            statut: "Terminé",
-            statut_color: "success",
-            link: "https://www.bencofoot.com/"
-        }
-    ]
-
-
     return (
-        <div className="bg-base-200" id="projets">
-            <div className="flex justify-center pt-8">
-                <div className="badge badge-outline badge-color-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="14" height="14"><path xmlns="http://www.w3.org/2000/svg" d="M42 8h-6V6a2 2 0 0 0-2-2H14a2 2 0 0 0-2 2v2H6a2 2 0 0 0-2 2v6a8 8 0 0 0 8 8h3.08A12 12 0 0 0 22 27.82V32h-2a6 6 0 0 0-6 6v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a6 6 0 0 0-6-6h-2v-4.18A12 12 0 0 0 32.92 24H36a8 8 0 0 0 8-8v-6a2 2 0 0 0-2-2M12 20a4 4 0 0 1-4-4v-4h4v4a12 12 0 0 0 .7 4zm16 16a2 2 0 0 1 2 2v2H18v-2a2 2 0 0 1 2-2zm4-20a8 8 0 0 1-16 0V8h16zm8 0a4 4 0 0 1-4 4h-.7a12 12 0 0 0 .7-4v-4h4z"></path></svg>                    Mes projets
+        <section id="projets" className="w-full bg-base-200 py-4">
+            {/* CONTAINER */}
+            <div className="mx-auto max-w-screen-xl px-2">
+                {/* TITLE */}
+                <div className="flex justify-center mt-8">
+                    <div className="badge badge-outline badge-color-secondary">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 48 48"
+                            width="14"
+                            height="14"
+                        >
+                            <path d="M42 8h-6V6a2 2 0 0 0-2-2H14a2 2 0 0 0-2 2v2H6a2 2 0 0 0-2 2v6a8 8 0 0 0 8 8h3.08A12 12 0 0 0 22 27.82V32h-2a6 6 0 0 0-6 6v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a6 6 0 0 0-6-6h-2v-4.18A12 12 0 0 0 32.92 24H36a8 8 0 0 0 8-8v-6a2 2 0 0 0-2-2M12 20a4 4 0 0 1-4-4v-4h4v4a12 12 0 0 0 .7 4zm16 16a2 2 0 0 1 2 2v2H18v-2a2 2 0 0 1 2-2zm4-20a8 8 0 0 1-16 0V8h16zm8 0a4 4 0 0 1-4 4h-.7a12 12 0 0 0 .7-4v-4h4z"></path>
+                        </svg>{" "}
+                        Mes projets
+                    </div>
                 </div>
-            </div>
-            <div className="overflow-x-auto mx-24 mt-10">
-                <table className="table table-zebra">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Nom</th>
-                            <th>Description</th>
-                            <th>Statut</th>
-                            <th>Lien</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tableItems.map((item, index) => (
-                            <tr key={index} className="hover:bg-base-300">
-                                <th>
-                                    <label>{index + 1}</label>
-                                </th>
-                                {/*name*/}
-                                <td className="font-bold">{item.name}</td>
-                                {/*desc*/}
-                                <td>    {item.desc.split('&#13;').map((text, index) => (
-                                    <p key={index}>{text}</p>
-                                ))}
-                                </td>
-                                {/*statut*/}
-                                <td className={`badge badge-outline ${item.statut_color === "success"
-                                    ? "badge-success"
-                                    : item.statut_color === "warning"
-                                        ? "badge-warning"
-                                        : "badge-info"
-                                    } m-6`}>{item.statut.split('&nbsp;').map((text, index) => (
-                                        <p key={index}>{text}</p>
-                                    ))}</td>
-                                {/*lien*/}
-                                <td >
-                                    <a href={`${item.link}`} className="link link-hover font-bold text-neutral" target="_blank" rel="noopener noreferrer">Voir</a>
-                                </td>
-                                {/*stack*/}
-                                <td>
-                                    <button
-                                        className="btn btn-ghost btn-sm bg-primary text-primary-content"
-                                        onClick={() => openModal(item.stack)} // Modifiez cette ligne
-                                    >
-                                        Détails
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-                {tableItems.map((item) => {
-                    const modalContent = ModalContentsPro[item.stack];
+
+                {/* PROJECTS */}
+                <div className="mx-auto max-w-screen-xl px-2 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
+                    {projectsData.map((project, index) => (
+                        <div
+                            key={index}
+                            className="bg-base-100 outline outline-neutral-300 p-4 shadow-sm rounded-md flex flex-col justify-between hover:shadow-md"
+                        >
+                            {/* HEADER */}
+                            <div className="flex justify-between items-start gap-2">
+                                <h3 className="font-semibold text-base">{project.name}</h3>
+                                <span
+                                    className={`badge badge-outline text-xs ${project.statut_color === "success"
+                                        ? "badge-success"
+                                        : project.statut_color === "warning"
+                                            ? "badge-warning"
+                                            : "badge-info"
+                                        }`}
+                                >
+                                    {project.statut}
+                                </span>
+                            </div>
+
+                            {/* DESCRIPTION – lg+ */}
+                            <p className="text-sm opacity-80 mt-2 hidden lg:block whitespace-pre-line leading-snug">
+                                {project.desc}
+                            </p>
+
+                            {/* ACTIONS */}
+                            <div className="flex flex-wrap justify-end gap-2 mt-4">
+                                {/* Voir description – md & sm */}
+                                <button
+                                    className="btn btn-sm btn-primary lg:hidden"
+                                    onClick={() =>
+                                        document.getElementById(`desc-${index}`).showModal()
+                                    }
+                                >
+                                    Voir description
+                                </button>
+
+                                {/* Lien */}
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-sm btn-ghost"
+                                >
+                                    Aperçu
+                                </a>
+
+                                {/* Stack */}
+                                <button
+                                    className="btn btn-sm btn-outline"
+                                    onClick={() => openModal(project.stack)}
+                                >
+                                    Détails
+                                </button>
+                            </div>
+
+                            {/* Modal Description */}
+                            <ModalText id={`desc-${index}`} title="Description">
+                                {project.desc}
+                            </ModalText>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Modals Stack Technique */}
+                {projectsData.map((project) => {
+                    const modalContent = ModalContentsPro[project.stack];
                     return (
                         <Modal
-                            key={item.stack}
-                            id={item.stack}
-                            title={`Stack Technique`}
+                            key={project.stack}
+                            id={project.stack}
+                            title="Stack Technique"
                         >
-                            {{
-                                front: modalContent.front,
-                                back: modalContent.back,
-                                data: modalContent.data,
-                                tools: modalContent.tools
-                            }}
+                            {modalContent}
                         </Modal>
                     );
                 })}
-            </div >
-        </div >
+            </div>
+        </section>
     );
-}
+};
 
 export default Projects;

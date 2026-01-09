@@ -1,0 +1,50 @@
+export const projectsData = [
+    {
+        name: "Tableau de bord Draft NFL 2024 & 2025",
+        desc: "Développement d'un tableau de bord interactif analysant \nles données de la draft NFL 2024 et 2025",
+        stack: "draftnfl24",
+        statut: "Terminé",
+        statut_color: "success",
+        link: "https://github.com/degbessou/Dashboard.git",
+    },
+    {
+        name: "Portfolio personnel",
+        desc: "Création d'un portfolio personnel mettant en valeur \nmes compétences et projets.",
+        stack: "portfolio",
+        statut: "Terminé",
+        statut_color: "success",
+        link: "https://degbessou.com",
+    },
+    {
+        name: "HelloADAM",
+        desc: "Un assistant conversationnel pour étudiants, basé sur l’IA, pour simplifier la vie universitaire.",
+        stack: "helloadam",
+        statut: "Terminé",
+        statut_color: "success",
+        link: "https://helloadam.ca/",
+    },
+    {
+        name: "BencoFoot",
+        desc: "Vitrine moderne, fiable et entièrement dédiée au football béninois.",
+        stack: "bencofoot",
+        statut: "Terminé",
+        statut_color: "success",
+        link: "https://www.bencofoot.com/",
+    },
+    {
+        name: "Site vitrine EasyTech",
+        desc: "Conception et développement d'une plateforme web \nprofessionnelle pour une entreprise de technologies web abordable.",
+        stack: "easyteck",
+        statut: "En cours",
+        statut_color: "warning",
+        link: "#",
+    },
+    {
+        name: "Tableau de bord CAN MAROC 2025",
+        desc: "Développement d'un tableau de bord interactif analysant \nles données de la Coupe d'Afrique des Nations 2025",
+        stack: "can25",
+        statut: "En cours",
+        statut_color: "warning",
+        link: "#",
+    }
+];

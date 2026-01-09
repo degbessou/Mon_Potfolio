@@ -28,5 +28,11 @@ export const ModalContentsPro = {
         back: <p>javascript, supabase</p>,
         data: <p>postgresql</p>,
         tools: <p>git, github, sourcetree, email.js, betteruptime, slack, zappier, telegram</p>
-    }
+    },
+    can25: {
+        front: <p>microsoft power bi, dax</p>,
+        back: <p>n/a</p>,
+        data: <p>postgresql, microsoft excel</p>,
+        tools: <p>pgadmin 4, git, github, sourcetree</p>
+    },
 }
