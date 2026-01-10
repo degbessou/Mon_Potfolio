@@ -69,7 +69,7 @@ const Footer = () => {
 
                         <div className="text-sm leading-snug">
                             <p>
-                                Portfolio réalisé avec passion par{" "}
+                                Portfolio développé par{" "}
                                 <strong>DEGBESSOU DONALD</strong>
                             </p>
                             <p className="mt-1">

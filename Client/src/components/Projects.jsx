@@ -10,7 +10,7 @@ const Projects = () => {
     const { openModal } = UseModal();
 
     return (
-        <section id="projets" className="w-full bg-base-200 py-4">
+        <section id="projets" className="bg-base-300 w-full bg-base-200 py-4">
             {/* CONTAINER */}
             <div className="mx-auto max-w-screen-xl px-2">
                 {/* TITLE */}

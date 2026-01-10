@@ -5,9 +5,9 @@ import { studiesData } from "../data/StudiesData";
 
 const Studies = () => {
     return (
-        <section className="py-6" id="education">
+        <section className="bg-base-300 py-6" id="education">
             {/* CONTAINER */}
-            <div className="mx-auto max-w-screen-xl px-2">
+            <div className="mx-auto max-w-screen-xl">
                 {/* DIV 1 : Header */}
                 <div className="flex justify-center mb-6">
                     <div className="badge badge-outline badge-color-secondary">
@@ -16,7 +16,7 @@ const Studies = () => {
                 </div>
 
                 {/* DIV 2 : Contenu */}
-                <div className="mx-6 md:mx-16 lg:mx-24">
+                <div className="mx-4 md:mx-16 lg:mx-24">
                     <div
                         className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center"
                     >

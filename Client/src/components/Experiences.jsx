@@ -11,7 +11,7 @@ const Experiences = () => {
         <section id="experiences" className="w-full bg-base-300 py-4">
 
             {/* CONTAINER */}
-            <div className="mx-auto max-w-screen-xl px-2">
+            <div className="mx-auto max-w-screen-xl px-4">
 
                 {/* TITLE */}
                 <div className="flex justify-center mt-8 pb-6">
@@ -44,12 +44,12 @@ const Experiences = () => {
                                         />
 
                                         <div>
-                                            <h3 className="font-bold text-lg">{exp.entreprise}</h3>
+                                            <h3 className="font-bold lg:text-lg">{exp.entreprise}</h3>
                                             <p className="text-sm opacity-60">{exp.location}</p>
                                         </div>
                                     </div>
 
-                                    <span className="badge badge-ghost text-xs">
+                                    <span className="badge badge-ghost text-xs whitespace-nowrap">
                                         {exp.date}
                                     </span>
                                 </div>

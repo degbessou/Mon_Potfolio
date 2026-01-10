@@ -40,7 +40,7 @@ export const projectsData = [
         link: "#",
     },
     {
-        name: "Tableau de bord CAN MAROC 2025",
+        name: "Tableau de bord CAN 2025",
         desc: "Développement d'un tableau de bord interactif analysant \nles données de la Coupe d'Afrique des Nations 2025",
         stack: "can25",
         statut: "En cours",
