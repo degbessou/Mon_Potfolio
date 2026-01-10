@@ -21,7 +21,7 @@ export const experiencesData = [
     location: "Québec, Canada",
     logo: "/pictures/freelance.png",
     position: "Développeur BI & Fullstack",
-    level: "Sénior",
+    level: "Expert",
     description: `
       Développement de solutions BI.
       Création de sites vitrines et applications web.

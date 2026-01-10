@@ -16,12 +16,12 @@ const About = () => {
 
     return (
         <div className="hero bg-base-200 min-h-[600px]">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content mx-auto max-w-screen-xl flex-col lg:flex-row-reverse px-4 sm:px-6">
                 <img
                     src="./pictures/photo_cr.jpg"
-                    className="max-w-sm rounded-lg shadow-2xl"
+                    className="max-w-sm max-w-full rounded-lg shadow-2xl"
                 />
-                <div className="font-agrandir-narrow font-semibold">
+                <div className="font-agrandir-narrow font-semibold w-full lg:w-auto">
                     <h1 className="text-5xl font-bold">Salut, moi c'est Donald !</h1>
                     <p className="text-justify py-6">
                         Développeur informatique à Québec, je transforme les données en tableaux de bord stratégiques.
