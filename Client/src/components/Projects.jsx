@@ -59,7 +59,7 @@ const Projects = () => {
                             <div className="flex flex-wrap justify-end gap-2 mt-4">
                                 {/* Voir description – md & sm */}
                                 <button
-                                    className="btn btn-sm btn-primary lg:hidden"
+                                    className="btn btn-sm btn-ghost lg:hidden"
                                     onClick={() =>
                                         document.getElementById(`desc-${index}`).showModal()
                                     }
@@ -72,14 +72,14 @@ const Projects = () => {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="btn btn-sm btn-ghost"
+                                    className="btn btn-sm btn-outline"
                                 >
                                     Aperçu
                                 </a>
 
                                 {/* Stack */}
                                 <button
-                                    className="btn btn-sm btn-outline"
+                                    className="btn btn-sm btn-primary"
                                     onClick={() => openModal(project.stack)}
                                 >
                                     Détails

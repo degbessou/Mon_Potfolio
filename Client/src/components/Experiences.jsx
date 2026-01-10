@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../assets/Modal";
 import { ModalContentsExp } from "../data/Modal-contents-exp";
-import { experiencesData } from "../data/experiencesData";
+import { experiencesData } from "../data/ExperiencesData";
 import ModalText from "../assets/ModalText";
 
 const Experiences = () => {
@@ -74,7 +74,7 @@ const Experiences = () => {
 
                                     {/* Voir description – md & sm */}
                                     <button
-                                        className="btn btn-sm btn-primary lg:hidden"
+                                        className="btn btn-sm btn-ghost lg:hidden"
                                         onClick={() =>
                                             document.getElementById(`desc-${index}`).showModal()
                                         }
@@ -84,7 +84,7 @@ const Experiences = () => {
 
                                     {/* Détails */}
                                     <button
-                                        className="btn btn-sm btn-outline"
+                                        className="btn btn-sm btn-primary"
                                         onClick={() =>
                                             document.getElementById(exp.details).showModal()
                                         }
