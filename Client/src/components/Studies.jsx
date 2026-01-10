@@ -16,10 +16,8 @@ const Studies = () => {
                 </div>
 
                 {/* DIV 2 : Contenu */}
-                <div className="mx-4 md:mx-16 lg:mx-24">
-                    <div
-                        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center"
-                    >
+                <div className="mx-4 md:mx-16 lg:mx-auto px-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                         {studiesData.map((item, idx) => (
                             <Card
                                 key={idx}

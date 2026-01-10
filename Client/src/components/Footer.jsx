@@ -43,60 +43,56 @@ const Footer = () => {
     }, []);*/}
 
     return (
-        <footer className="relative bg-base-300 border-t border-base-300">
-            <div className="max-w-screen-xl mx-auto px-4 py-6">
-                <div className="flex items-start justify-between gap-4">
-
-                    {/* LEFT : logo + texte */}
-                    <aside className="flex items-start gap-3 text-left">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-                            <defs>
-                                <clipPath id="squareClip">
-                                    <rect x="0" y="0" width="40" height="40" rx="20" />
-                                </clipPath>
-                            </defs>
-                            <g clipPath="url(#squareClip)">
-                                <rect x="0" y="0" width="72" height="72" fill="#000000" />
-                                <g transform="translate(20 20)">
-                                    <g transform="scale(0.08)">
-                                        <g transform="translate(-128 -128)">
-                                            <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM104,176a8,8,0,0,1,0,16H72a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H80v96Zm88,8a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h24V80H152a8,8,0,0,1,0-16h32a8,8,0,0,1,8,8Z" fill="#FFFFFF"></path>
-                                        </g>
+        <footer className="relative bg-base-200 border-t border-base-300">
+            <div className="max-w-screen-xl mx-auto px-4 py-6 relative">
+                {/* LEFT : logo + texte */}
+                <aside className="flex items-start gap-3 text-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                        <defs>
+                            <clipPath id="squareClip">
+                                <rect x="0" y="0" width="40" height="40" rx="20" />
+                            </clipPath>
+                        </defs>
+                        <g clipPath="url(#squareClip)">
+                            <rect x="0" y="0" width="72" height="72" fill="#000000" />
+                            <g transform="translate(20 20)">
+                                <g transform="scale(0.08)">
+                                    <g transform="translate(-128 -128)">
+                                        <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM104,176a8,8,0,0,1,0,16H72a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H80v96Zm88,8a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h24V80H152a8,8,0,0,1,0-16h32a8,8,0,0,1,8,8Z" fill="#FFFFFF"></path>
                                     </g>
                                 </g>
                             </g>
-                        </svg>
+                        </g>
+                    </svg>
 
-                        <div className="text-sm leading-snug">
-                            <p>
-                                Portfolio développé par{" "}
-                                <strong>DEGBESSOU DONALD</strong>
-                            </p>
-                            <p className="mt-1">
-                                © {new Date().getFullYear()} – All rights reserved
-                            </p>
-                        </div>
-                    </aside>
+                    <div className="text-sm leading-snug">
+                        <p>
+                            Portfolio développé par <strong>DEGBESSOU DONALD</strong>
+                        </p>
+                        <p className="mt-1">
+                            © {new Date().getFullYear()} – All rights reserved
+                        </p>
+                    </div>
+                </aside>
 
-                    {/* RIGHT : réseaux sociaux */}
-                    <nav className="absolute bottom-1 right-1 flex gap-4">
-                        {socialLinks.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={item.name}
-                                className="hover:opacity-70 transition"
-                            >
-                                {item.svg}
-                            </a>
-                        ))}
-                    </nav>
-
-                </div>
+                {/* RIGHT : réseaux sociaux toujours en bas à droite */}
+                <nav className="absolute bottom-4 right-4 flex gap-4">
+                    {socialLinks.map((item) => (
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={item.name}
+                            className="hover:opacity-70 transition"
+                        >
+                            {item.svg}
+                        </a>
+                    ))}
+                </nav>
             </div>
         </footer>
+
 
     )
 }

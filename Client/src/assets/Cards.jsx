@@ -8,8 +8,8 @@ const Card = ({
     status,
 }) => {
     return (
-        <div className="card card-border bg-base-100 w-full max-w-full">
-            <div className="card-body hover:bg-gray-50 duration-150">
+        <div className="card card-border bg-base-100 w-full lg:w-104">
+            <div className="card-body">
                 <a className="space-y-4 block">
                     <div className="flex items-start gap-x-4">
                         <div className="bg-white w-14 h-14 border rounded-full flex items-center justify-center shrink-0">

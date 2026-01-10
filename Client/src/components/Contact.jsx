@@ -109,7 +109,7 @@ const Contact = () => {
 
     return (
         <div className="bg-base-300 flex flex-col items-center py-4" id="contact">
-            <div className="max-w-screen-xl bg-base-300 mx-auto px-4 py-6">
+            <div className="max-w-screen-xl mx-auto px-4 py-2">
                 {/* Composant d'alerte */}
                 {alert.show && (
                     <div
@@ -132,7 +132,7 @@ const Contact = () => {
                         </button>
                     </div>
                 )}
-                <div className="flex justify-center mt-6 pb-4">
+                <div className="flex justify-center mt-6 pb-6">
                     <div className="badge badge-outline badge-color-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="14" height="14"><g xmlns="http://www.w3.org/2000/svg" fill="currentColor" transform="scale(3)"><path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1M5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path><path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path></g></svg>                    Contact
                     </div>

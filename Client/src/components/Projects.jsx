@@ -10,11 +10,11 @@ const Projects = () => {
     const { openModal } = UseModal();
 
     return (
-        <section id="projets" className="bg-base-300 w-full bg-base-200 py-4">
+        <section id="projets" className="bg-base-200 w-full bg-base-200 py-4">
             {/* CONTAINER */}
             <div className="mx-auto max-w-screen-xl px-2">
                 {/* TITLE */}
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-4">
                     <div className="badge badge-outline badge-color-secondary">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +29,11 @@ const Projects = () => {
                 </div>
 
                 {/* PROJECTS */}
-                <div className="mx-auto max-w-screen-xl px-2 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
+                <div className="mx-auto max-w-screen-xl px-2 mt-6 grid grid-cols-1 lg:grid-cols-2 gap-3">
                     {projectsData.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-base-100 outline outline-neutral-300 p-4 shadow-sm rounded-md flex flex-col justify-between hover:shadow-md"
+                            className="bg-base-300 outline outline-neutral-300 p-4 shadow-sm rounded-md flex flex-col justify-between hover:shadow-md"
                         >
                             {/* HEADER */}
                             <div className="flex justify-between items-start gap-2">
