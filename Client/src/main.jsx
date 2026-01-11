@@ -13,7 +13,7 @@ import Banner from './components/Banner'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Banner />
+    {/*<Banner />*/}
     <Navbar />
     <About />
     <Experiences />

@@ -16,10 +16,10 @@ const About = () => {
 
     return (
         <div className="hero bg-base-200 min-h-[600px]">
-            <div className="hero-content mx-auto max-w-screen-xl flex-col lg:flex-row-reverse px-4 sm:px-6">
+            <div className="hero-content mx-auto max-w-screen-xl px-4 flex-col lg:flex-row-reverse">
                 <img
                     src="./pictures/photo_cr.jpg"
-                    className="max-w-sm max-w-full rounded-lg shadow-2xl"
+                    className="rounded-lg shadow-2xl"
                 />
                 <div className="font-agrandir-narrow font-semibold w-full lg:w-auto">
                     <h1 className="text-5xl font-bold">Salut, moi c'est Donald !</h1>

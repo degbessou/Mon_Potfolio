@@ -8,7 +8,7 @@ const Card = ({
     status,
 }) => {
     return (
-        <div className="card card-border bg-base-100 w-full lg:w-104">
+        <div className="card card-border bg-base-300 outline w-full lg:w-104">
             <div className="card-body">
                 <a className="space-y-4 block">
                     <div className="flex items-start gap-x-4">

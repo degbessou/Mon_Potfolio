@@ -10,7 +10,7 @@ const Projects = () => {
     const { openModal } = UseModal();
 
     return (
-        <section id="projets" className="bg-base-200 w-full bg-base-200 py-4">
+        <section id="projets" className="bg-base-200 w-full py-4">
             {/* CONTAINER */}
             <div className="mx-auto max-w-screen-xl px-2">
                 {/* TITLE */}
@@ -33,7 +33,7 @@ const Projects = () => {
                     {projectsData.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-base-300 outline outline-neutral-300 p-4 shadow-sm rounded-md flex flex-col justify-between hover:shadow-md"
+                            className="bg-base-100 outline outline-primary-300 p-4 shadow-sm rounded-md flex flex-col justify-between hover:shadow-md"
                         >
                             {/* HEADER */}
                             <div className="flex justify-between items-start gap-2">
