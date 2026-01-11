@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="navbar bg-base-300 font-agrandir-narrow font-bold shadow-sm">
+        <div className="navbar bg-base-200 font-agrandir-narrow font-bold shadow-sm">
             {/* CONTAINER CENTRÉ */}
             <div className="mx-auto max-w-screen-xl w-full px-2 lg:px-4 flex items-center justify-between">
 

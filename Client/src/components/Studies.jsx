@@ -5,7 +5,7 @@ import { studiesData } from "../data/StudiesData";
 
 const Studies = () => {
     return (
-        <section className="bg-base-300 py-6" id="education">
+        <section className="bg-base-200 py-6" id="education">
             {/* CONTAINER */}
             <div className="mx-auto max-w-screen-xl">
                 {/* DIV 1 : Header */}
@@ -16,7 +16,7 @@ const Studies = () => {
                 </div>
 
                 {/* DIV 2 : Contenu */}
-                <div className="mx-4 md:mx-16 lg:mx-auto px-4">
+                <div className="md:mx-16 lg:mx-auto px-4">
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                         {studiesData.map((item, idx) => (
                             <Card

@@ -8,7 +8,7 @@ const Experiences = () => {
 
     return (
         /* SECTION FULL WIDTH */
-        <section id="experiences" className="w-full bg-base-300 py-4">
+        <section id="experiences" className="w-full bg-base-200 py-4">
 
             {/* CONTAINER */}
             <div className="mx-auto max-w-screen-xl px-4">
@@ -24,7 +24,7 @@ const Experiences = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
 
                     {experiencesData.map((exp, index) => (
-                        <div key={index} className="card bg-base-100 shadow-sm w-full">
+                        <div key={index} className="card bg-base-300 shadow-sm w-full">
                             <div className="card-body p-4">
 
                                 {/* HEADER */}
