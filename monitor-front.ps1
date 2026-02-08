@@ -101,7 +101,7 @@ while ($attempt -lt $MaxRetries) {
         
         # Envoyer notification à chaque vérification
         $message = "Site accessible: $SiteUrl`nStatus: $($result.StatusCode)`nTemps de réponse: $($result.ResponseTime)ms"
-        Send-SlackNotification -Message $message -Status "UP"
+        Send-DiscordNotification -Message $message -Status "UP"
         
         exit 0
     } else {
@@ -136,7 +136,7 @@ Add-Content -Path $logFile -Value $logMessage
 
 # Envoi des notifications
 $message = "⚠️ Site indisponible: $SiteUrl`n$errorDetails`nTentatives: $MaxRetries"
-Send-SlackNotification -Message $message -Status "DOWN"
+Send-DiscordNotification -Message $message -Status "DOWN"
 
 # Échec du workflow pour déclencher les notifications GitHub
 exit 1
