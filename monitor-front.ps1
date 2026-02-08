@@ -18,11 +18,12 @@ function Send-DiscordNotification {
     if ([string]::IsNullOrEmpty($webhookUrl)) { return }
     
     $color = if ($Status -eq "DOWN") { 15158332 } else { 3066993 } # Rouge ou Vert
+    $emoji = if ($Status -eq "DOWN") { ":red_circle:" } else { ":white_check_mark:" }
     
     $payload = @{
         embeds = @(
             @{
-                title = "🔔 Monitoring - $Status"
+                title = "$emoji Monitoring - $Status"
                 description = $Message
                 color = $color
                 timestamp = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ")
@@ -34,9 +35,11 @@ function Send-DiscordNotification {
     } | ConvertTo-Json -Depth 4
     
     try {
-        Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $payload -ContentType "application/json"
+        # Encoder en UTF8 pour Discord
+        $utf8Bytes = [System.Text.Encoding]::UTF8.GetBytes($payload)
+        Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $utf8Bytes -ContentType "application/json; charset=utf-8"
     } catch {
-        Write-Warning "Échec envoi Discord: $_"
+        Write-Warning "Echec envoi Discord: $_"
     }
 }
 
